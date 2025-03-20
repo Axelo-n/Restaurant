@@ -19,6 +19,8 @@ public class Main {
 		restaurant.addChef(chef1);
 		restaurant.addChef(chef2);
 		
+		// hanya supaya output lebih rapi
+		System.out.println();
 		Visitor visitor1 = new Visitor("Ebednezer");
 		Visitor visitor2 = new Visitor("Granite");
 		

@@ -2,6 +2,8 @@ package restaurant;
 
 import java.util.HashMap;
 
+import main.Main;
+
 public class Menu {
 	private String name;
 	private HashMap<String, Food> foodList = new HashMap<>();
@@ -24,6 +26,12 @@ public class Menu {
 			if(food.getName().equals(name)) return food;
 		}
 		return null;
+	}
+
+	public void showFoods() {
+		for(Food food: foodList.values()) {
+			System.out.println("    - "+food.getName()+" (Price: "+Main.formatIDR(food.getPrice())+")");
+		}
 	}
 	
 	

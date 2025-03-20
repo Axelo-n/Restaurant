@@ -18,7 +18,7 @@ public class Restaurant {
 
 	public void addChef(Chef chef) {
 		chefList.add(chef);
-		System.out.println("Chef "+chef.getName()+" is hired at "+name+"\n");
+		System.out.println("Chef "+chef.getName()+" is hired at "+name);
 	}
 
 	public void addMenu(Menu menu) {
@@ -30,6 +30,7 @@ public class Restaurant {
 		System.out.println("Available Menus:");
 		for(Menu menu : menuList) {
 			System.out.println("  - "+menu.getName());
+			menu.showFoods();
 		}
 		System.out.println();
 	}
