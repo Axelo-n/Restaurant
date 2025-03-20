@@ -2,7 +2,7 @@ package restaurant;
 
 import java.util.HashMap;
 
-import main.Main;
+import helper.Format;
 
 public class Menu {
 	private String name;
@@ -30,7 +30,7 @@ public class Menu {
 
 	public void showFoods() {
 		for(Food food: foodList.values()) {
-			System.out.println("    - "+food.getName()+" (Price: "+Main.formatIDR(food.getPrice())+")");
+			System.out.println("    - "+food.getName()+" (Price: "+Format.formatIDR(food.getPrice())+")");
 		}
 	}
 	

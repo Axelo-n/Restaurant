@@ -5,8 +5,6 @@ import restaurant.Food;
 import restaurant.Menu;
 import people.Chef;
 import people.Visitor;
-import java.text.NumberFormat;
-import java.util.Locale;
 
 public class Main {
 
@@ -19,8 +17,6 @@ public class Main {
 		restaurant.addChef(chef1);
 		restaurant.addChef(chef2);
 		
-		// hanya supaya output lebih rapi
-		System.out.println();
 		Visitor visitor1 = new Visitor("Ebednezer");
 		Visitor visitor2 = new Visitor("Granite");
 		
@@ -50,24 +46,12 @@ public class Main {
 		restaurant.order(chef2, visitor2, "Udang Emas", 9);
 		restaurant.order(chef2, visitor2, "Ice Cream", 90);
 		
-		// hanya supaya output lebih rapi
-		System.out.println();
 		visitor1.showTotalPrice();
 		visitor2.showTotalPrice();
 		
-		// hanya supaya output lebih rapi
-		System.out.println();
 		chef1.showCookHistory();
 		chef2.showCookHistory();
 		
 		restaurant.showTotalIncome();
 	}
-	
-	// Helper method to format currency in IDR 
-
-    @SuppressWarnings("deprecation")
-	public static String formatIDR(int amount) { 
-        NumberFormat formatter = NumberFormat.getCurrencyInstance(new Locale("id", "ID")); 
-        return formatter.format(amount); 
-    } 
 }

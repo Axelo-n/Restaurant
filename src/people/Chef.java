@@ -19,11 +19,10 @@ public class Chef {
 	}
 
 	public void showCookHistory() {
-		System.out.println("Chef "+name+"'s cooking history:");
+		System.out.println("\nChef "+name+"'s cooking history:");
 		for(String history: cookHistory) {
 			System.out.println("  - "+history);
 		}
-		System.out.println();
 	}
 	
 }

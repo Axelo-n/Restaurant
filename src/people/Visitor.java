@@ -1,6 +1,6 @@
 package people;
 
-import main.Main;
+import helper.Format;
 
 public class Visitor {
 	private String name;
@@ -15,7 +15,7 @@ public class Visitor {
 	}
 	
 	public void showTotalPrice() {
-		System.out.println(name+" spent in total "+Main.formatIDR(totalPrice));
+		System.out.println("\n"+name+" spent in total "+Format.formatIDR(totalPrice));
 	}
 
 	public String getName() {

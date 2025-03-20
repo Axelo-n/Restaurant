@@ -2,7 +2,7 @@ package restaurant;
 
 import java.util.ArrayList;
 
-import main.Main;
+import helper.Format;
 import people.Chef;
 import people.Visitor;
 
@@ -14,11 +14,12 @@ public class Restaurant {
 	
 	public Restaurant(String name) {
 		this.name = name;
+		System.out.println(name+" is now open!\n");
 	}
 
 	public void addChef(Chef chef) {
 		chefList.add(chef);
-		System.out.println("Chef "+chef.getName()+" is hired at "+name);
+		System.out.println("Chef "+chef.getName()+" is hired at "+name+"\n");
 	}
 
 	public void addMenu(Menu menu) {
@@ -61,7 +62,8 @@ public class Restaurant {
 	}
 
 	public void showTotalIncome() {
-		System.out.println(name+" gained in total "+Main.formatIDR(totalIncome));
+		System.out.println();
+		System.out.println(name+" gained in total "+Format.formatIDR(totalIncome));
 	}
 
 	
